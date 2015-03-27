@@ -1,0 +1,3744 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      ×Block Editor 2 --ÓBlocks of DOOM!
+
+
+
+                               ÖMarch 28, 2015
+
+
+
+
+
+
+
+
+
+
+ ÐBrad Nelson
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+                  Î-×Vim
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+                  Î-×Vim
+
+               Î*×Forth legacy of small powerful editors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+                  Î-×Vim
+
+               Î*×Forth legacy of small powerful editors
+
+               Î*×I need it to be compatible to useful
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+                  Î-×Vim
+
+               Î*×Forth legacy of small powerful editors
+
+               Î*×I need it to be compatible to useful
+
+               Î*×I needÊsome×of the features
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+                  Î-×Vim
+
+               Î*×Forth legacy of small powerful editors
+
+               Î*×I need it to be compatible to useful
+
+               Î*×I needÊsome×of the features
+
+               Î*×BUT I still want to keep it simple!
+
+
+
+
+
+
+
+
+
+
+
+
+
+               ÊI want all the cool features.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               ÊI want all the cool features.
+
+
+
+
+
+
+
+                            ÎBut I want to learn from HISTORY...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   ÉVIDEO
+                      ÊVIDEO
+                         ËVIDEO
+                            ÌVIDEO
+                               ÍVIDEO
+                                  ÎVIDEO
+                                     ÏVIDEO
+                                        ÐVIDEO
+                                           ÑVIDEO
+                                        ÒVIDEO
+                                     ÓVIDEO
+                                       ÔVIDEO
+                                         ÕVIDEO
+                                           ÖVIDEO
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î*×1024 byte Forth styleÊvirtual memory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î*×1024 byte Forth styleÊvirtual memory
+
+               Î*×Dead simple API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î*×1024 byte Forth styleÊvirtual memory
+
+               Î*×Dead simple API
+                   : block ( n -- a )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î*×1024 byte Forth styleÊvirtual memory
+
+               Î*×Dead simple API
+                   : block ( n -- a )
+                   : update
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î*×1024 byte Forth styleÊvirtual memory
+
+               Î*×Dead simple API
+                   : block ( n -- a )
+                   : update
+                   : flush
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î*×1024 byte Forth styleÊvirtual memory
+
+               Î*×Dead simple API
+                   : block ( n -- a )
+                   : update
+                   : flush
+
+               Î*×Used for data
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×BLOCKS
+             Ð------
+
+               Î*×1024 byte Forth styleÊvirtual memory
+
+               Î*×Dead simple API
+                   : block ( n -- a )
+                   : update
+                   : flush
+
+               Î*×Used for data
+
+               Î*×Used for source code!
+
+
+
+
+
+
+
+
+
+
+
+             ×Blocks for Source Code
+             Ð----------------------
+
+
+
+
+
+
+
+               Î
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Blocks for Source Code
+             Ð----------------------
+
+               Î*×64 x 16 blocks of source code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Blocks for Source Code
+             Ð----------------------
+
+               Î*×64 x 16 blocks of source code
+
+               Î*×Simple words to load blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Blocks for Source Code
+             Ð----------------------
+
+               Î*×64 x 16 blocks of source code
+
+               Î*×Simple words to load blocks
+                  : load ( n -- )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Blocks for Source Code
+             Ð----------------------
+
+               Î*×64 x 16 blocks of source code
+
+               Î*×Simple words to load blocks
+                  : load ( n -- )
+                  : thru ( a b -- )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 0
+             Ð---------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 0
+             Ð---------------
+
+               Î*×Classic prompt block editor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 0
+             Ð---------------
+
+               Î*×Classic prompt block editor
+
+               Î*×1-2 letter commands for line editing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 0
+             Ð---------------
+
+               Î*×Classic prompt block editor
+
+               Î*×1-2 letter commands for line editing
+
+               Î*×Very small, a few blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 0
+             Ð---------------
+
+               Î*×Classic prompt block editor
+
+               Î*×1-2 letter commands for line editing
+
+               Î*×Very small, a few blocks
+
+               Î*×gforth's blocked.fb 1 block docs, 3 blocks code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 0
+             Ð---------------
+
+               Î*×Classic prompt block editor
+
+               Î*×1-2 letter commands for line editing
+
+               Î*×Very small, a few blocks
+
+               Î*×gforth's blocked.fb 1 block docs, 3 blocks code
+
+               Î*×RetroForth Editor 1 block! (Charles Childers)
+
+
+
+
+
+
+
+
+
+
+
+ ×   Screen 3 not modified
+ ×    0 \×multi screen commands                                29aug95py
+ ×    1 : il  pad c/l 'rest insert 'rest drop c/l blank update v ;
+ ×    2 : dl  'rest c/l  delete  update v ;
+ ×    3 : qx ( -- )  0 0 at-xy scr @ &60 / &60 * &60 bounds
+ ×    4   DO  3 0  DO  [ FORTH ] i 1+ [ EDITOR ] j + dup 3 .r
+ ×    5                space  dup scr @ = IF rvson  THEN
+ ×    6                block &20 type  rvsoff  LOOP  cr  3 +LOOP ;
+ ×    7 : nx  &60 scr @ +       scr !  qx ;
+ ×    8 : bx -&60 scr @ + 0 max scr !  qx ;
+ ×    9 : n  scr @ 1+ l r#×off ;
+ ×   10 : b  scr @ 1- l r#×off ;
+ ×   11 : s ( n -- / n )   >r
+ ×   12   BEGIN  ['] f catch  WHILE  scr @ r@ =  IF  rdrop  EXIT  THEN
+ ×   13          scr @ r@ u<  IF  n  ELSE  b  THEN  REPEAT  r> ;
+ ×   14 Forth definitions
+ ×   15
+×      ok
+Ó    il : square dup * ;
+
+
+
+
+
+
+             × forth s"×block_data"×open-blocks
+              ×variable blk
+              ×: row dup 64 type 64 + ;
+              ×: header s"×Block:"×type blk @ . cr ;
+              ×: across space 64 0 do [char] - emit loop cr ;
+              ×: line [char] | emit row [char] | emit cr ;
+              ×: lines 16 0 do line loop ;
+              ×: mblock blk @ block ;
+              ×: v page header across mblock lines across drop ;
+              ×: s blk ! v ;
+              ×: i 64 * mblock + swap cmove v update flush ;
+              ×: d 64 * mblock + 64 32 fill v update flush ;
+              ×: x mblock 1024 32 fill v update flush ;
+              ×: e blk @ load ;
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 1
+             Ð---------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 1
+             Ð---------------
+
+               Î*×Screen editor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 1
+             Ð---------------
+
+               Î*×Screen editor
+
+               Î*×Small source, dozen blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 1
+             Ð---------------
+
+               Î*×Screen editor
+
+               Î*×Small source, dozen blocks
+
+               Î*×Examples:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 1
+             Ð---------------
+
+               Î*×Screen editor
+
+               Î*×Small source, dozen blocks
+
+               Î*×Examples:
+                  Î-×Pygmy Forth Editor (Frank Sergeant)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Block Editors 1
+             Ð---------------
+
+               Î*×Screen editor
+
+               Î*×Small source, dozen blocks
+
+               Î*×Examples:
+                  Î-×Pygmy Forth Editor (Frank Sergeant)
+                  Î-×VIBE (Sam Falvo II)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Variations
+             Ð----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Variations
+             Ð----------
+
+               Î*×Shadow blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Variations
+             Ð----------
+
+               Î*×Shadow blocks
+
+               Î*×File mapped blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Variations
+             Ð----------
+
+               Î*×Shadow blocks
+
+               Î*×File mapped blocks
+
+               Î*×Colorforth source blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+               Î*×Small focused pages of code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+               Î*×Small focused pages of code
+
+               Î*×Tiny powerful developer tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+               Î*×Small focused pages of code
+
+               Î*×Tiny powerful developer tools
+
+               Î*×2D used more effectively
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+               Î*×Small focused pages of code
+
+               Î*×Tiny powerful developer tools
+
+               Î*×2D used more effectively
+                  Î-×No need to think about carriage returns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+               Î*×Small focused pages of code
+
+               Î*×Tiny powerful developer tools
+
+               Î*×2D used more effectively
+                  Î-×No need to think about carriage returns
+                  Î-×No need to think about trailing whitespace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+               Î*×Small focused pages of code
+
+               Î*×Tiny powerful developer tools
+
+               Î*×2D used more effectively
+                  Î-×No need to think about carriage returns
+                  Î-×No need to think about trailing whitespace
+
+               Î*×Constraint leading to art
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Good things
+             Ð-----------
+
+               Î*×Small focused pages of code
+
+               Î*×Tiny powerful developer tools
+
+               Î*×2D used more effectively
+                  Î-×No need to think about carriage returns
+                  Î-×No need to think about trailing whitespace
+
+               Î*×Constraint leading to art
+
+               Î*×Speed
+
+
+
+
+
+
+
+
+
+
+             ×Bad things
+             Ð----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Bad things
+             Ð----------
+
+               Î*×Constrained 64x16 format
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Bad things
+             Ð----------
+
+               Î*×Constrained 64x16 format
+                  Î-×Smaller than modern source
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Bad things
+             Ð----------
+
+               Î*×Constrained 64x16 format
+                  Î-×Smaller than modern source
+                  Î-×Often just a little too tight
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Bad things
+             Ð----------
+
+               Î*×Constrained 64x16 format
+                  Î-×Smaller than modern source
+                  Î-×Often just a little too tight
+
+               Î*×Poor interoperability with files / OSes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Bad things
+             Ð----------
+
+               Î*×Constrained 64x16 format
+                  Î-×Smaller than modern source
+                  Î-×Often just a little too tight
+
+               Î*×Poor interoperability with files / OSes
+
+               Î*×No modern conveniences
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Bad things
+             Ð----------
+
+               Î*×Constrained 64x16 format
+                  Î-×Smaller than modern source
+                  Î-×Often just a little too tight
+
+               Î*×Poor interoperability with files / OSes
+
+               Î*×No modern conveniences
+
+               Î*×Wasteful over slow terminal connection
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Crucial Source Editor Features
+             Ð------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Crucial Source Editor Features
+             Ð------------------------------
+
+               Î*×Modern sizes and layouts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Crucial Source Editor Features
+             Ð------------------------------
+
+               Î*×Modern sizes and layouts
+
+               Î*×Transform text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Crucial Source Editor Features
+             Ð------------------------------
+
+               Î*×Modern sizes and layouts
+
+               Î*×Transform text
+
+               Î*×Handle text files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Crucial Source Editor Features
+             Ð------------------------------
+
+               Î*×Modern sizes and layouts
+
+               Î*×Transform text
+
+               Î*×Handle text files
+
+               Î*×Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Crucial Source Editor Features
+             Ð------------------------------
+
+               Î*×Modern sizes and layouts
+
+               Î*×Transform text
+
+               Î*×Handle text files
+
+               Î*×Search
+
+               Î*×Syntax Highlighting
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+                  Î-×8 - 80 character lines fairly uniform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+                  Î-×8 - 80 character lines fairly uniform
+                  Î-×Comment lines are usually ~80 column
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+                  Î-×8 - 80 character lines fairly uniform
+                  Î-×Comment lines are usually ~80 column
+
+               Î*×Should work on top of 1k blocks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+                  Î-×8 - 80 character lines fairly uniform
+                  Î-×Comment lines are usually ~80 column
+
+               Î*×Should work on top of 1k blocks
+                  Î-×Row shouldn't span a 1k boundary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+                  Î-×8 - 80 character lines fairly uniform
+                  Î-×Comment lines are usually ~80 column
+
+               Î*×Should work on top of 1k blocks
+                  Î-×Row shouldn't span a 1k boundary
+
+               Î*×Interoperability with text editors
+
+
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+                  Î-×8 - 80 character lines fairly uniform
+                  Î-×Comment lines are usually ~80 column
+
+               Î*×Should work on top of 1k blocks
+                  Î-×Row shouldn't span a 1k boundary
+
+               Î*×Interoperability with text editors
+
+               Î*×Minimal waste
+
+
+
+
+
+
+
+
+
+
+             ×What size blocks / pages?
+             Ð-------------------------
+
+               Î*×80 columns is crucial
+                  Î-×Most (C++) lines have 0 - 7 character
+                  Î-×8 - 80 character lines fairly uniform
+                  Î-×Comment lines are usually ~80 column
+
+               Î*×Should work on top of 1k blocks
+                  Î-×Row shouldn't span a 1k boundary
+
+               Î*×Interoperability with text editors
+
+               Î*×Minimal waste
+
+               Î*×Compatible with 64x16
+
+
+
+
+
+
+
+
+             ×Possibilities
+             Ð-------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Possibilities
+             Ð-------------
+
+               Î*×64 x 16 with escaped long lines
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Possibilities
+             Ð-------------
+
+               Î*×64 x 16 with escaped long lines
+
+               Î*×80 x 12 = 960 with 64 leftover
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Possibilities
+             Ð-------------
+
+               Î*×64 x 16 with escaped long lines
+
+               Î*×80 x 12 = 960 with 64 leftover
+
+               Î*×81 x 12 = 972 with 52 leftover
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Possibilities
+             Ð-------------
+
+               Î*×64 x 16 with escaped long lines
+
+               Î*×80 x 12 = 960 with 64 leftover
+
+               Î*×81 x 12 = 972 with 52 leftover
+
+               Î*Ó81 x 24 = 1994 with 104 leftover (2k)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+                  Î-×Modal (navigate vs input)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+                  Î-×Modal (navigate vs input)
+                  Î-×Home row for movement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+                  Î-×Modal (navigate vs input)
+                  Î-×Home row for movement
+                  Î-×Explicit insert and delete
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+                  Î-×Modal (navigate vs input)
+                  Î-×Home row for movement
+                  Î-×Explicit insert and delete
+                  Î-×Extra single key navigation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+                  Î-×Modal (navigate vs input)
+                  Î-×Home row for movement
+                  Î-×Explicit insert and delete
+                  Î-×Extra single key navigation
+
+               Î*×Line by line copy-cut-paste
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+                  Î-×Modal (navigate vs input)
+                  Î-×Home row for movement
+                  Î-×Explicit insert and delete
+                  Î-×Extra single key navigation
+
+               Î*×Line by line copy-cut-paste
+
+               Î*×Circular wraparound
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Text editing
+             Ð------------
+
+               Î*×Vi-like keys
+                  Î-×Modal (navigate vs input)
+                  Î-×Home row for movement
+                  Î-×Explicit insert and delete
+                  Î-×Extra single key navigation
+
+               Î*×Line by line copy-cut-paste
+
+               Î*×Circular wraparound
+
+               Î*×Highlight block start line
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+                  Î-×End of file markerÓ~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+                  Î-×End of file markerÓ~
+                  Î-×Continue line markerÓ\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+                  Î-×End of file markerÓ~
+                  Î-×Continue line markerÓ\
+                  Î-×Color markers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+                  Î-×End of file markerÓ~
+                  Î-×Continue line markerÓ\
+                  Î-×Color markers
+
+               Î*×Wrap lines over 80 columns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+                  Î-×End of file markerÓ~
+                  Î-×Continue line markerÓ\
+                  Î-×Color markers
+
+               Î*×Wrap lines over 80 columns
+
+               Î*×Load file into a range of blocks
+
+
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+                  Î-×End of file markerÓ~
+                  Î-×Continue line markerÓ\
+                  Î-×Color markers
+
+               Î*×Wrap lines over 80 columns
+
+               Î*×Load file into a range of blocks
+
+               Î*×Save / drop file when done
+
+
+
+
+
+
+
+
+
+
+             ×File Import / Export
+             Ð--------------------
+
+               Î*×Escape characters
+                  Î-×Start of file markerÓ$
+                  Î-×End of file markerÓ~
+                  Î-×Continue line markerÓ\
+                  Î-×Color markers
+
+               Î*×Wrap lines over 80 columns
+
+               Î*×Load file into a range of blocks
+
+               Î*×Save / drop file when done
+
+               Î*×Split blocks to add lines
+
+
+
+
+
+
+
+
+             ×Search
+             Ð------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Search
+             Ð------
+
+               Î*×Forth command prompt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Search
+             Ð------
+
+               Î*×Forth command prompt
+
+               Î*×Block Editor 0 like commands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Search
+             Ð------
+
+               Î*×Forth command prompt
+
+               Î*×Block Editor 0 like commands
+
+               Î*×Search shortcut keys
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Startup
+             Ð-------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Startup
+             Ð-------
+
+               Î*×Create .be2_blocks or use BE2_BLOCKS env variable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Startup
+             Ð-------
+
+               Î*×Create .be2_blocks or use BE2_BLOCKS env variable
+
+               Î*×be2 [<search>]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Terminal
+             Ð--------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Terminal
+             Ð--------
+
+               Î*×Use xterm-color escape codes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Terminal
+             Ð--------
+
+               Î*×Use xterm-color escape codes
+
+               Î*×0-15 base colors + 216 r6g6b6 + 24 gray
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Terminal
+             Ð--------
+
+               Î*×Use xterm-color escape codes
+
+               Î*×0-15 base colors + 216 r6g6b6 + 24 gray
+
+               Î*×Scroll when possible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Terminal
+             Ð--------
+
+               Î*×Use xterm-color escape codes
+
+               Î*×0-15 base colors + 216 r6g6b6 + 24 gray
+
+               Î*×Scroll when possible
+
+               Î*×Allow row select when possible
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Syntax Highlighting
+             Ð-------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Syntax Highlighting
+             Ð-------------------
+
+               Î*×Uncolored code looks weird
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Syntax Highlighting
+             Ð-------------------
+
+               Î*×Uncolored code looks weird
+
+               Î*×Traditionally uses regexes + rules
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Syntax Highlighting
+             Ð-------------------
+
+               Î*×Uncolored code looks weird
+
+               Î*×Traditionally uses regexes + rules
+
+               Î*×Mirrors language grammars
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Syntax Highlighting
+             Ð-------------------
+
+               Î*×Uncolored code looks weird
+
+               Î*×Traditionally uses regexes + rules
+
+               Î*×Mirrors language grammars
+
+               Î*×Often fails, especially for mixed language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Syntax Highlighting
+             Ð-------------------
+
+               Î*×Uncolored code looks weird
+
+               Î*×Traditionally uses regexes + rules
+
+               Î*×Mirrors language grammars
+
+               Î*×Often fails, especially for mixed language
+
+               Î*×Starting to use real parsers
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Syntax Highlighting
+             Ð-------------------
+
+               Î*×Uncolored code looks weird
+
+               Î*×Traditionally uses regexes + rules
+
+               Î*×Mirrors language grammars
+
+               Î*×Often fails, especially for mixed language
+
+               Î*×Starting to use real parsers
+
+               Î*×TOO COMPLICATED!
+
+
+
+
+
+
+
+
+
+
+             ×Semantic Highlighting
+             Ð---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Semantic Highlighting
+             Ð---------------------
+
+               Î*×Show like things in like colors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Semantic Highlighting
+             Ð---------------------
+
+               Î*×Show like things in like colors
+
+               Î*×Can still use syntax knowledge
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Semantic Highlighting
+             Ð---------------------
+
+               Î*×Show like things in like colors
+
+               Î*×Can still use syntax knowledge
+
+               Î*×Same variable, same color
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Semantic Highlighting
+             Ð---------------------
+
+               Î*×Show like things in like colors
+
+               Î*×Can still use syntax knowledge
+
+               Î*×Same variable, same color
+
+               Î*×Ideally stable colors across files
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Semantic Highlighting
+             Ð---------------------
+
+               Î*×Show like things in like colors
+
+               Î*×Can still use syntax knowledge
+
+               Î*×Same variable, same color
+
+               Î*×Ideally stable colors across files
+
+               Î*×Supported in Visual Studio, and others
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Semantic Highlighting
+             Ð---------------------
+
+               Î*×Show like things in like colors
+
+               Î*×Can still use syntax knowledge
+
+               Î*×Same variable, same color
+
+               Î*×Ideally stable colors across files
+
+               Î*×Supported in Visual Studio, and others
+
+               Î*×Easy to approximate!
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Classify characters asÊidentifier×orÕsingle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Classify characters asÊidentifier×orÕsingle
+
+               Î*×Break words at spaces orÕsingles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Classify characters asÊidentifier×orÕsingle
+
+               Î*×Break words at spaces orÕsingles
+
+               Î*×Hash word characters, pick color from hash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Classify characters asÊidentifier×orÕsingle
+
+               Î*×Break words at spaces orÕsingles
+
+               Î*×Hash word characters, pick color from hash
+
+               Î*×Allow aËstuck×color triggered by comment words
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Classify characters asÊidentifier×orÕsingle
+
+               Î*×Break words at spaces orÕsingles
+
+               Î*×Hash word characters, pick color from hash
+
+               Î*×Allow aËstuck×color triggered by comment words
+
+               Î*×ResetËstuck×color on comment end words
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Classify characters asÊidentifier×orÕsingle
+
+               Î*×Break words at spaces orÕsingles
+
+               Î*×Hash word characters, pick color from hash
+
+               Î*×Allow aËstuck×color triggered by comment words
+
+               Î*×ResetËstuck×color on comment end words
+
+               Î*×Handle forth ()s with extraÖforthy×flag
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Works for Forth, C, C++, Python
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Works for Forth, C, C++, Python
+
+               Î*×Works for mixed language
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Easy Semantic Highlighting
+             Ð--------------------------
+
+               Î*×Works for Forth, C, C++, Python
+
+               Î*×Works for mixed language
+
+               Î*×Stable across files
+
+
+
+
+
+
+
+
+
+
+
+
+( Word hash computation )
+
+variable hash-value
+
+hex ffffffff decimal constant max32
+: mask32 ( n -- n ) max32 and ;
+: word-hash-reset   0 hash-value ! ;
+: +word-hash ( ch -- )
+  dup [char] - = if drop exit then
+  normalize-char hash-value @ + mask32
+  dup 10 lshift mask32 + mask32
+  dup 6 rshift xor hash-value ! ;
+
+: word-hash ( -- n ) hash-value @ dup 3 lshift mask32 +
+                     dup 11 rshift xor dup 15 lshift mask32 + mask32 ;
+
+\ Word hash color
+: weight ( n -- n ) 6 /mod 6 /mod + + ;
+: 5flip ( n -- n ) 5 swap - ;
+: flip ( n -- n ) 6 /mod 6 /mod 5flip 6 * swap 5flip + 6 * swap 5flip + ;
+: word-hash-color ( -- n )
+  word-hash 216 mod dup weight 6 < if flip then 16 + ;
+
+
+$/Users/bradnelson/projects/be2/nano_pepper.c
+/*
+ * Copyright (c) 2013 The Native Client Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file.
+ */
+
+#include "nacl_main.h"
+
+extern int nacl_nano_main(int argc, char *argv[]);
+
+int nacl_main(int argc, char* argv[]) {
+  if (nacl_startup_untar(argv[0], "nano.tar", "/"))
+    return -1;
+  return nacl_nano_main(argc, argv);
+}
+~
+
+
+
+
+
+
+
+// Sends a spawn/wait request to JavaScript and returns the result.
+static pp::VarDictionary SendRequest(pp::VarDictionary* req) {
+  const std::string& req_id = GetRequestId();
+  req->Set("id", req_id);
+
+  NaClSpawnReply reply;
+  pthread_mutex_init(&reply.mu, NULL);
+  pthread_cond_init(&reply.cond, NULL);
+  PSInstance* instance = PSInstance::GetInstance();
+  instance->RegisterMessageHandler(req_id, &HandleNaClSpawnReply, &reply);
+
+  instance->PostMessage(*req);
+
+  pthread_mutex_lock(&reply.mu);
+  pthread_cond_wait(&reply.cond, &reply.mu);
+  pthread_mutex_unlock(&reply.mu);
+
+  pthread_cond_destroy(&reply.cond);
+  pthread_mutex_destroy(&reply.mu);
+
+  instance->RegisterMessageHandler(req_id, NULL, &reply);
+
+  return reply.result;
+}
+def Memoize(f):
+  """Memoization decorator for functions taking one or more arguments."""
+  class Memo(dict):
+    def __init__(self, f):
+      super(Memo, self).__init__()
+      self.f = f
+
+    def __call__(self, *args):
+      return self[args]
+
+    def __missing__(self, key):
+      ret = self[key] = self.f(*key)
+      return ret
+
+  return Memo(f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Implementation
+             Ð--------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Implementation
+             Ð--------------
+
+               Î*×gforth
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Implementation
+             Ð--------------
+
+               Î*×gforth
+
+               Î*×~800 lines inÕblock normal×form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Implementation
+             Ð--------------
+
+               Î*×gforth
+
+               Î*×~800 lines inÕblock normal×form
+
+               Î*×~600 lines in linear source
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Implementation
+             Ð--------------
+
+               Î*×gforth
+
+               Î*×~800 lines inÕblock normal×form
+
+               Î*×~600 lines in linear source
+
+               Î*×~32 pages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Implementation
+             Ð--------------
+
+               Î*×gforth
+
+               Î*×~800 lines inÕblock normal×form
+
+               Î*×~600 lines in linear source
+
+               Î*×~32 pages
+
+               Î*×More room for refactoring
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Implementation
+             Ð--------------
+
+               Î*×gforth
+
+               Î*×~800 lines inÕblock normal×form
+
+               Î*×~600 lines in linear source
+
+               Î*×~32 pages
+
+               Î*×More room for refactoring
+
+               Î*×Slide show support
+
+
+
+
+
+
+
+
+
+
+
+                 CODE
+                                              CODE
+                                                         TOUR
+                        TOUR
+
+
+            CODE
+                                                   CODE
+                                                              TOUR
+                   TOUR
+
+
+                CODE
+                                             CODE
+                                                             TOUR
+                       TOUR
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+               Î*×Refine keys based on using daily
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+               Î*×Refine keys based on using daily
+
+               Î*×Add undo / redo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+               Î*×Refine keys based on using daily
+
+               Î*×Add undo / redo
+
+               Î*×Add overview mode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+               Î*×Refine keys based on using daily
+
+               Î*×Add undo / redo
+
+               Î*×Add overview mode
+
+               Î*×Enhance clipboard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+               Î*×Refine keys based on using daily
+
+               Î*×Add undo / redo
+
+               Î*×Add overview mode
+
+               Î*×Enhance clipboard
+
+               Î*×Add spell check
+
+
+
+
+
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+               Î*×Refine keys based on using daily
+
+               Î*×Add undo / redo
+
+               Î*×Add overview mode
+
+               Î*×Enhance clipboard
+
+               Î*×Add spell check
+
+               Î*×Document better
+
+
+
+
+
+
+
+
+
+
+
+                                        +-------------+
+                                        | QUESTIONS ? |
+                                        +-------------+
+
+
+
+
+           ×Source and slides:
+
+                 https://github.com/flagxor/be2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
