@@ -726,7 +726,7 @@ variable clipboard-last
 : arg-check   argc @ 2 > if usage then ;
 
 : block-filename ( -- a n)
-  s" BE2_BLOCKS" getenv dup 0= if 2drop s" .be2_blocks" then ;
+  s" BE2_BLOCKS" getenv dup 0= if 2drop s" ./.be2_blocks" then ;
 : setup-blocks
   0 block-offset !
   block-filename open-blocks
