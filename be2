@@ -716,6 +716,7 @@ variable clipboard-last
   endcase else drop then
 ;
 
+
 ( Main loop and startup )
 
 : handle-key   input-mode @ if input-key else navigate-key then refresh ;
@@ -736,9 +737,4 @@ variable clipboard-last
 : main   setup-blocks editor ;
 : reset-terminal   normal page ;
 : go   ['] main catch flush dup -28 = if reset-terminal bye else throw then ;
-go
-go
-minal   normal page ;
-: go   ['] main catch flush dup -28 = if reset-terminal bye else throw then ;
-go
 go
