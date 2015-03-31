@@ -127,7 +127,7 @@
                Î*×I use text editors everyday
                   Î-×Vim
 
-               Î*×Forth legacy of small powerful editors
+               Î*×Forth has a legacy of small powerful editors!
 
 
 
@@ -151,35 +151,11 @@
                Î*×I use text editors everyday
                   Î-×Vim
 
-               Î*×Forth legacy of small powerful editors
+               Î*×Forth has a legacy of small powerful editors!
 
-               Î*×I need it to be compatible to useful
-
-
+               Î*×But they're weird and incompatible...
 
 
-
-
-
-
-
-
-
-
-
-
-
-             ×Motivation
-             Ð----------
-
-               Î*×I use text editors everyday
-                  Î-×Vim
-
-               Î*×Forth legacy of small powerful editors
-
-               Î*×I need it to be compatible to useful
-
-               Î*×I needÊsome×of the features
 
 
 
@@ -199,15 +175,63 @@
                Î*×I use text editors everyday
                   Î-×Vim
 
-               Î*×Forth legacy of small powerful editors
+               Î*×Forth has a legacy of small powerful editors!
 
-               Î*×I need it to be compatible to useful
+               Î*×But they're weird and incompatible...
 
-               Î*×I needÊsome×of the features
-
-               Î*×BUT I still want to keep it simple!
+               Î*×And they lack some useful features...
 
 
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+                  Î-×Vim
+
+               Î*×Forth has a legacy of small powerful editors!
+
+               Î*×But they're weird and incompatible...
+
+               Î*×And they lack some useful features...
+
+               Î*×Can I add the features I need to them?
+
+
+
+
+
+
+
+
+
+
+
+             ×Motivation
+             Ð----------
+
+               Î*×I use text editors everyday
+                  Î-×Vim
+
+               Î*×Forth has a legacy of small powerful editors!
+
+               Î*×But they're weird and incompatible...
+
+               Î*×And they lack some useful features...
+
+               Î*×Can I add the features I need to them?
+
+               Î*×Without adding back all the complexity?
 
 
 
@@ -744,30 +768,6 @@
 
 
 
- ×   Screen 3 not modified
- ×    0 \×multi screen commands                                29aug95py
- ×    1 : il  pad c/l 'rest insert 'rest drop c/l blank update v ;
- ×    2 : dl  'rest c/l  delete  update v ;
- ×    3 : qx ( -- )  0 0 at-xy scr @ &60 / &60 * &60 bounds
- ×    4   DO  3 0  DO  [ FORTH ] i 1+ [ EDITOR ] j + dup 3 .r
- ×    5                space  dup scr @ = IF rvson  THEN
- ×    6                block &20 type  rvsoff  LOOP  cr  3 +LOOP ;
- ×    7 : nx  &60 scr @ +       scr !  qx ;
- ×    8 : bx -&60 scr @ + 0 max scr !  qx ;
- ×    9 : n  scr @ 1+ l r#×off ;
- ×   10 : b  scr @ 1- l r#×off ;
- ×   11 : s ( n -- / n )   >r
- ×   12   BEGIN  ['] f catch  WHILE  scr @ r@ =  IF  rdrop  EXIT  THEN
- ×   13          scr @ r@ u<  IF  n  ELSE  b  THEN  REPEAT  r> ;
- ×   14 Forth definitions
- ×   15
-×      ok
-Ó    il : square dup * ;
-
-
-
-
-
 
              × forth s"×block_data"×open-blocks
               ×variable blk
@@ -787,6 +787,30 @@
 
 
 
+
+
+
+
+
+ ×   Screen 3 not modified
+ ×    0 \×multi screen commands                                29aug95py
+ ×    1 : il  pad c/l 'rest insert 'rest drop c/l blank update v ;
+ ×    2 : dl  'rest c/l  delete  update v ;
+ ×    3 : qx ( -- )  0 0 at-xy scr @ &60 / &60 * &60 bounds
+ ×    4   DO  3 0  DO  [ FORTH ] i 1+ [ EDITOR ] j + dup 3 .r
+ ×    5                space  dup scr @ = IF rvson  THEN
+ ×    6                block &20 type  rvsoff  LOOP  cr  3 +LOOP ;
+ ×    7 : nx  &60 scr @ +       scr !  qx ;
+ ×    8 : bx -&60 scr @ + 0 max scr !  qx ;
+ ×    9 : n  scr @ 1+ l r#×off ;
+ ×   10 : b  scr @ 1- l r#×off ;
+ ×   11 : s ( n -- / n )   >r
+ ×   12   BEGIN  ['] f catch  WHILE  scr @ r@ =  IF  rdrop  EXIT  THEN
+ ×   13          scr @ r@ u<  IF  n  ELSE  b  THEN  REPEAT  r> ;
+ ×   14 Forth definitions
+ ×   15
+×      ok
+Ó    il : square dup * ;
 
 
 
@@ -3689,6 +3713,30 @@ def Memoize(f):
                Î*×Document better
 
 
+
+
+
+
+
+
+
+
+             ×Future Directions
+             Ð-----------------
+
+               Î*×Refine keys based on using daily
+
+               Î*×Add undo / redo
+
+               Î*×Add overview mode
+
+               Î*×Enhance clipboard
+
+               Î*×Add spell check
+
+               Î*×Document better
+
+               Î*×Inline program execution
 
 
 
