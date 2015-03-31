@@ -50,7 +50,7 @@ color-char-last color-char-first - 1+ constant color-char-count
 variable caret  \ relative to top of screen
 variable top  \ relative to top of file
 variable input-mode  \ f = navigate, t = input
-
+create chunk block-size allot  \ Block sized working chunk.
 
 
 
@@ -366,11 +366,12 @@ variable refresh-level
              bl caret-at c! update line-refresh ;
 : del-char   caret-at dup 1+ swap columns caret @ columns mod - 1- cmove
              bl caret-top row columns 1- + c! update line-refresh ;
-
-
-
-
-
+: after-range ( -- n n ) caret-top dup lines / 1+ lines * 1- swap ;
+: bl-line ( n -- ) row columns bl fill update ;
+: cmove-line ( s d -- ) swap row chunk columns cmove update
+                        row chunk swap columns cmove update ;
+: del-line   after-range ?do i 1+ i cmove-line loop after-range drop bl-line
+             full scrub ;
 
 
 
@@ -407,7 +408,6 @@ variable import-offset   \ Column being written to
 
 ( Import file )
 variable fid
-create chunk block-size allot  \ Buffer for reading from file.
 : import-file ( a n -- )
   start-import
   import-row @ >r
@@ -423,6 +423,7 @@ create chunk block-size allot  \ Buffer for reading from file.
   update-row-count
   r> top ! 0 caret !   full scrub
 ;
+
 
 
 
@@ -701,6 +702,7 @@ variable clipboard-last
     [char] k of up endof            [char] j of down endof
     [char] n of word-left endof     [char] . of word-right endof
     [char] x of del-char endof      [char] z of ins-char endof
+    [char] X of del-line endof
     [char] r of add-page endof      [char] c of split-page endof
     [char] y of flush-top endof  [char] b of 0 top ! 0 caret ! full scrub endof
     [char] W of export-file endof   [char] D of drop-file endof
@@ -715,7 +717,6 @@ variable clipboard-last
     CTRL- T  of toggle-margins full scrub endof
   endcase else drop then
 ;
-
 
 ( Main loop and startup )
 
