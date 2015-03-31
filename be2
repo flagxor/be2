@@ -370,8 +370,8 @@ variable refresh-level
 : bl-line ( n -- ) row columns bl fill update ;
 : cmove-line ( s d -- ) swap row chunk columns cmove update
                         row chunk swap columns cmove update ;
-: del-line   after-range ?do i 1+ i cmove-line loop
-             after-range drop bl-line full scrub ;
+: del-line-raw   after-range ?do i 1+ i cmove-line loop
+                 after-range drop bl-line full scrub ;
 : ins-line   after-range swap ?do i 1- i cmove-line -1 +loop
              after-range nip bl-line full scrub ;
 
@@ -610,17 +610,17 @@ variable clipboard-last
   clipboard-rows @ clipboard-limit >= if exit then
   caret-top row clipboard-next columns cmove
   cursor scrub ;
-: copy-advance   type-cr caret-top clipboard-last ! ;
+: copy-mark   caret-top clipboard-last ! ;   : copy-advance type-cr copy-mark ;
 : clobber-line  caret-top row columns bl fill update line-refresh ;
 : copy-line   copy-line-raw copy-advance ;
 : cut-line   copy-line-raw clobber-line copy-advance ;
+: del-line   copy-line-raw del-line-raw caret-top copy-mark ;
 : paste
   clipboard-rows @ 0 ?do
     i clipboard-row caret-top row columns cmove update
     type-cr
   loop
   full scrub ;
-
 ( Shortcuts )
 
 : parse-rest ( -- a n ) 127 parse ;
@@ -702,12 +702,12 @@ variable clipboard-last
     [char] n of word-left endof     [char] . of word-right endof
     [char] x of del-char endof      [char] z of ins-char endof
     [char] X of del-line endof      [char] Z of ins-line endof
-    [char] r of add-page endof      [char] c of split-page endof
+    [char] r of add-page endof      [char] v of split-page endof
     [char] y of flush-top endof  [char] b of 0 top ! 0 caret ! full scrub endof
     [char] W of export-file endof   [char] D of drop-file endof
     [char] C of copy-line endof     [char] V of paste endof
     [char] , of -1 page+! endof     [char] m of 1 page+! endof
-    [char] X of cut-line endof
+    [char] c of cut-line endof
     [char] i of true input-mode ! endof
     [char] \ of accept-cmd do-cmd full scrub endof
     [char] | of edit-cmd do-cmd full scrub endof
