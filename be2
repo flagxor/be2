@@ -370,11 +370,10 @@ variable refresh-level
 : bl-line ( n -- ) row columns bl fill update ;
 : cmove-line ( s d -- ) swap row chunk columns cmove update
                         row chunk swap columns cmove update ;
-: del-line   after-range ?do i 1+ i cmove-line loop after-range drop bl-line
-             full scrub ;
-
-
-
+: del-line   after-range ?do i 1+ i cmove-line loop
+             after-range drop bl-line full scrub ;
+: ins-line   after-range swap ?do i 1- i cmove-line -1 +loop
+             after-range nip bl-line full scrub ;
 
 
 
@@ -702,7 +701,7 @@ variable clipboard-last
     [char] k of up endof            [char] j of down endof
     [char] n of word-left endof     [char] . of word-right endof
     [char] x of del-char endof      [char] z of ins-char endof
-    [char] X of del-line endof
+    [char] X of del-line endof      [char] Z of ins-line endof
     [char] r of add-page endof      [char] c of split-page endof
     [char] y of flush-top endof  [char] b of 0 top ! 0 caret ! full scrub endof
     [char] W of export-file endof   [char] D of drop-file endof
