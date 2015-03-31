@@ -365,7 +365,7 @@ variable refresh-level
 : ins-char   caret-at dup 1+ columns caret @ columns mod - 1- cmove>
              bl caret-at c! update line-refresh ;
 : del-char   caret-at dup 1+ swap columns caret @ columns mod - 1- cmove
-             update line-refresh ;
+             bl caret-top row columns 1- + c! update line-refresh ;
 
 
 
