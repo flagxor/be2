@@ -410,19 +410,19 @@ variable fid
 : import-file ( a n -- )
   start-import
   import-row @ >r
-  2dup r/o open-file throw fid !
   start-file-char import-char
-  import-cwd s" /" import-string import-string lf import-char
-  begin
-    chunk block-size fid @ read-file throw
-    dup chunk swap import-string
-  0= until
-  fid @ close-file throw
+  2dup import-cwd s" /" import-string import-string lf import-char
+  r/o open-file 0= if fid !
+    begin
+      chunk block-size fid @ read-file throw
+      dup chunk swap import-string
+    0= until
+    fid @ close-file throw
+  else drop then
   end-file-char import-char
   update-row-count
   r> top ! 0 caret !   full scrub
 ;
-
 
 
 
