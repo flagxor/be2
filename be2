@@ -1,4 +1,4 @@
-#! /usr/bin/gforth
+#! /usr/bin/env gforth
 ( vim: set syntax=colorforth: )
 
 \ be2 - a.k.a. Block Editor II
@@ -215,7 +215,7 @@ variable color-stuck
 
 ( Emit syntax highlighted characters )
 
-: cemit ( n -- )
+: clemit ( n -- )
   dup color-char-first color-char-last in-range? if
     color-dump
     color-char-first - 1+ dup color-stuck ! fg bl emit exit
@@ -227,7 +227,7 @@ variable color-stuck
   identifier-char? 0= if color-dump then
 ;
 
-: ctype ( a n -- ) 0 ?do dup i + c@ cemit loop drop lf cemit ;
+: cltype ( a n -- ) 0 ?do dup i + c@ clemit loop drop lf clemit ;
 
 
 
@@ -239,7 +239,7 @@ variable color-stuck
 
 ( Command prompt handling )
 
-create prompt-text columns allot
+create prompt-text block-size allot  ( extra space for cmd line )
 variable prompt-length
 
 ( workaround bug in history.fs )
@@ -252,12 +252,12 @@ action-of everyline is old-everyline
 : prompt-buffer ( -- a n ) prompt-text columns ;
 : goto-prompt ( -- a n ) 0 screen-lines 1- at-xy prompt-color clear-to-end ;
 : setup-prompt ( -- a n ) goto-prompt prompt-buffer ;
+: prompt+! ( a n -- ) dup >r prompt-text prompt-length @ + swap cmove
+                      r> prompt-length +! ;
 
 : accept-cmd setup-prompt accept prompt-length ! ;
 : edit-cmd setup-prompt prompt-length @ edit-line prompt-length ! ;
 : do-cmd flush prompt-text prompt-length @ ['] evaluate catch drop ;
-
-
 
 
 
@@ -303,7 +303,7 @@ variable margins-on
 : goto-row ( n -- ) lmargin swap at-xy ;
 : row-string ( n -- a n ) top-row columns rtrim ;
 : finish-row   7 fg clear-to-end ;  \ white foreground to show cursor
-: print-row ( n -- ) dup goto-row dup row-color row-string ctype finish-row ;
+: print-row ( n -- ) dup goto-row dup row-color row-string cltype finish-row ;
 : park-cursor   caret @ columns /mod swap lmargin + swap at-xy ;
 : draw-row ( n -- ) dup left-margin dup print-row right-margin ;
 : draw-rows ( n n -- ) do i draw-row loop ;
@@ -722,9 +722,9 @@ variable clipboard-last
 : handle-key   input-mode @ if input-key else navigate-key then refresh ;
 : editor   full-refresh begin ekey show handle-key again ;
 
-: usage   s" Usage: be2 [search]" etype ecr   1 (bye) ;
-: arg-check   argc @ 2 > if usage then ;
-
+: arg-cmd   s" " prompt!
+            begin next-arg 2dup 0 0 d<> while s"  " prompt+!  prompt+!
+            repeat 2drop do-cmd ;
 : block-filename ( -- a n)
   s" BE2_BLOCKS" getenv dup 0= if 2drop 0 filename-length !
       s" PWD" getenv +filename s" /.be2_blocks" +filename filename@ then ;
@@ -732,8 +732,7 @@ variable clipboard-last
   0 block-offset !
   block-filename open-blocks
   update-row-count
-  arg-check
-  argc @ 2 >= if 1 arg search! search-for flush-top then
+  arg-cmd
 ;
 : main   setup-blocks editor ;
 : reset-terminal   normal page ;
