@@ -243,11 +243,13 @@ create prompt-text block-size allot  ( extra space for cmd line )
 variable prompt-length
 
 ( workaround bug in history.fs )
+( disbled)
+(
 defer old-everyline
 action-of everyline is old-everyline
 : flat-everyline   old-everyline prompt-length @ linew ! ;
 ' flat-everyline is everyline
-
+)
 : prompt! ( a n -- ) prompt-text swap dup prompt-length ! cmove ;
 : prompt-buffer ( -- a n ) prompt-text columns ;
 : goto-prompt ( -- a n ) 0 screen-lines 1- at-xy prompt-color clear-to-end ;
@@ -258,8 +260,6 @@ action-of everyline is old-everyline
 : accept-cmd setup-prompt accept prompt-length ! ;
 : edit-cmd setup-prompt prompt-length @ edit-line prompt-length ! ;
 : do-cmd flush prompt-text prompt-length @ ['] evaluate catch drop ;
-
-
 
 ( Row access )
 
